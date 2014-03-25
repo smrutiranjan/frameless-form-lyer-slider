@@ -1161,7 +1161,7 @@ theme: "jquerymobile",
 });
 $("#pagetxtStartDate_div").datepicker({ 
 	showOn: "button",
-	buttonImage: "/wp-content/plugins/frameless-form/cal.gif",
+	buttonImage: "'.plugins_url('cal.gif',__FILE__).'",
 	buttonImageOnly: true,									  
 	 minDate: 0,
 	 maxDate: "+18M +14D",
@@ -1187,7 +1187,7 @@ $("#pagetxtStartDate_div").datepicker({
 	 });
 $("#pagetxtEndDate_div").datepicker({ 
 	showOn: "button",
-	buttonImage: "/wp-content/plugins/frameless-form/cal.gif",
+	buttonImage: "'.plugins_url('cal.gif',__FILE__).'",
 	buttonImageOnly: true,									  
 	 minDate: 0,
 	 maxDate: "+18M +14D",
