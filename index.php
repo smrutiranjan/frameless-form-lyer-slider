@@ -1212,6 +1212,7 @@ $("#pagetxtEndDate_div").datepicker({
 	 }
 	 });
 });	
+function myTrim(x){return x.replace(/^\s+|\s+$/gm,\'\');}
  function updatefield()
 {
 	var startdate=document.getElementById("pagetxtStartDate").value;
@@ -1224,7 +1225,16 @@ $("#pagetxtEndDate_div").datepicker({
 	var droparr=enddate.split("/");
 	document.getElementById("DropoffDay").value=droparr[0];
 	document.getElementById("DropoffMonth").value=droparr[1];
-	document.getElementById("DropoffYear").value=droparr[2];            
+	document.getElementById("DropoffYear").value=droparr[2];  
+	if(myTrim(document.getElementById(\'pagetxtStartDate\').value) == "" || myTrim(document.getElementById(\'pagetxtEndDate\').value) == "" )
+	{
+		alert("please enter the start date & end date of your travel.");
+		return false;
+	}
+	else
+	{
+		document.getElementById(\'theform\').submit();
+	}
 }</script>
 		<div id="frameless_form_section">
              <div class="frameless_form_div" data-role="content" style="background-image:url(\''.plugins_url('/upload/'.get_option( 'pageform1_wg_bg_img') , __FILE__ ).'\');background-color:'.get_option('pageform1_wg_bg_color').';border:2px solid '.get_option('pageform1_wg_bg_color').'" style="width:700px">            
@@ -1270,7 +1280,7 @@ $("#pagetxtEndDate_div").datepicker({
 	 </div>
 	  <div class="clear5" style="height:10px;"></div>
 	  <input type="hidden" value="9" name="CategoryTypeID"/>
-	<img border="0" oldsrc="'.plugins_url( 'search.png' , __FILE__).'" srcover="'.plugins_url( 'search_ho.png' , __FILE__).'" src="'.plugins_url( 'search.png' , __FILE__).'" onclick="updatefield();document.getElementById(\'theform\').submit();"/>
+	<img border="0" oldsrc="'.plugins_url( 'search.png' , __FILE__).'" srcover="'.plugins_url( 'search_ho.png' , __FILE__).'" src="'.plugins_url( 'search.png' , __FILE__).'" onclick="return updatefield();"/>
 	 <input type="hidden" name="PickupDay" id="PickupDay"/><input type="hidden" name="PickupMonth" id="PickupMonth"/><input type="hidden" name="PickupYear" id="PickupYear"/>
 	 <input type="hidden" name="DropoffDay" id="DropoffDay"/><input type="hidden" name="DropoffMonth" id="DropoffMonth"/><input type="hidden" name="DropoffYear" id="DropoffYear"/>
 	 <div class="clear5"></div>
