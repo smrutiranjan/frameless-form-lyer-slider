@@ -677,23 +677,23 @@ vertical-align:middle;
 	add_option( 'pageform3_wg_bg_color','#1966a5', '', 'yes' ); 
 	
 	delete_option('pageform1_header_img_en');
-	add_option('pageform1_header_img_en',plugins_url('/upload/headlogo.png', __FILE__ ), '', 'yes' );
+	add_option('pageform1_header_img_en','headlogo.png', '', 'yes' );
 	
 	delete_option('pageform2_header_img_en');
-	add_option('pageform2_header_img_en',plugins_url('/upload/headlogo.png', __FILE__ ), '', 'yes' );
+	add_option('pageform2_header_img_en','headlogo.png', '', 'yes' );
 	
 	delete_option('pageform3_header_img_en');
-	add_option('pageform3_wg_bg_img',plugins_url('/upload/headlogo.png', __FILE__ ), '', 'yes' );
+	add_option('pageform3_wg_bg_img','headlogo.png', '', 'yes' );
 	
 	
 	delete_option('pageform1_wg_bg_img');
-	add_option( 'pageform1_wg_bg_img',plugins_url('/upload/026081-572-TA.jpg', __FILE__ ), '', 'yes' ); 
+	add_option( 'pageform1_wg_bg_img','026081-572-TA.jpg', '', 'yes' ); 
 	
 	delete_option('pageform2_wg_bg_img');
-	add_option( 'pageform2_wg_bg_img',plugins_url('/upload/026081-572-TA.jpg', __FILE__ ), '', 'yes' ); 
+	add_option( 'pageform2_wg_bg_img','026081-572-TA.jpg', '', 'yes' ); 
 	
 	delete_option('pageform3_wg_bg_img');
-	add_option( 'pageform3_wg_bg_img',plugins_url('/upload/026081-572-TA.jpg', __FILE__ ), '', 'yes' ); 
+	add_option( 'pageform3_wg_bg_img','026081-572-TA.jpg', '', 'yes' ); 
 }
 add_action('plugins_loaded','frameless_form_load_text_domain');
 add_action( 'init', 'frameless_front_js' );
